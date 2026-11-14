@@ -9,8 +9,10 @@
     justify-content: center;
 }
 
+@media (max-width: 767px) {
 .heading-name {
-    font-size: 29px;
+    font-size: 24px;
+}
 }
 
 .heading-img {
