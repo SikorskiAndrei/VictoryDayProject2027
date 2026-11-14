@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интерактивная карта</title>
+
+    <link rel='stylesheet' href='https://unpkg.com/leaflet@1.9.4/dist/leaflet.css' />
+    <script src='https://unpkg.com/leaflet@1.9.4/dist/leaflet.js'></script>
+
+    <style>
+        /* Задаем размеры контейнера для карты */
+        #map {
+            width: 95dvw;
+            height: 90dvw;
+            max-height: 90dvh;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        /* Стили для вашего кастомного HTML внутри всплывающего окошка */
+        .custom-popup {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 5px;
+        }
+        .custom-popup h3 {
+            margin: 0 0 8px 0;
+            color: #2c3e50;
+            font-size: 16px;
+        }
+        .custom-popup p {
+            margin: 0 0 12px 0;
+            color: #7f8c8d;
+            font-size: 13px;
+            line-height: 1.4;
+        }
+        .custom-popup .map-btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 6px 12px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+        .custom-popup .map-btn:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Контейнер, где развернется карта -->
+    <div id="map"></div>
+
+    <script>
+        // 2. Инициализируем карту. [53.90, 27.56] — это координаты центра Минска. 12 — масштаб (zoom)
+        var map = L.map('map', {
+            attributionControl: false
+        }).setView([53.9022, 27.5618], 12);
+
+        L.control.attribution({
+            prefix: "Victory Day Project 6 \"G\""
+        }).addTo(map);
+
+        // 3. Подключаем легальный слой карт OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // 4. Добавляем первую метку (например, в центре города)
+        var marker1 = L.marker([53.9023, 27.5619]).addTo(map);
+
+        // 5. Прописываем ЛЮБОЙ HTML-код внутри всплывающего окна метки
+        marker1.bindPopup(`
+            <div class="custom-popup">
+                <h3>Главный офис в Минске</h3>
+                <p>Приходите к нам на кофе! Работаем с 9:00 до 21:00 без выходных.</p>
+                <!-- Здесь работает относительная ссылка сайта -->
+                <a href="/contacts" class="map-btn">Подробнее о нас</a>
+            </div>
+        `);
+
+        // Пример: Добавим вторую метку чуть в стороне (например, возле ст.м. Якуба Коласа)
+        var marker2 = L.marker([53.9167, 27.5833]).addTo(map);
+        marker2.bindPopup(`
+            <div class="custom-popup">
+                <h3>Наш второй магазин</h3>
+                <p>Широкий ассортимент товаров и удобная парковка.</p>
+                <a href="/shop-page" class="map-btn">Перейти в каталог</a>
+            </div>
+        `);
+
+        var marker3= L.marker([53.894734, 27.431620]).addTo(map);
+    </script>
+
+</body>
+</html>
