@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+/* Задаем размеры контейнера для карты */
+#map {
+    width: 100dvw;
+    height: 95dvh;
+    /* max-height: 90dvh; */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для вашего кастомного HTML внутри всплывающего окошка */
+.marker-popup {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 5px;
+}
+
+.marker-popup h3 {
+    color: #2c3e50;
+    font-size: 16px;
+}
+.marker-popup h4 {
+    color: #2c3e50;
+}
+
+.marker-popup p {
+    margin: 0 0 12px 0;
+    color: #7f8c8d;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.marker-popup .map-btn {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 6px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.marker-popup .map-btn:hover {
+    background-color: #2980b9;
+}
