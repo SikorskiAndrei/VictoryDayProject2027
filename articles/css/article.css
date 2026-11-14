@@ -9,6 +9,10 @@
     justify-content: center;
 }
 
+.heading-name {
+    font-size: 29px;
+}
+
 .heading-img {
     width: 40dvw;
     max-width: 300px;
@@ -17,7 +21,7 @@
 }
 
 .article {
-    font-size: 24px;
+    font-size: 23px;
     width: 99%;
     padding: 10px;
     border: solid grey 2px;
