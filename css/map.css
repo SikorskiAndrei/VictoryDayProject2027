@@ -1,12 +1,16 @@
-body {
+/* Задаем размеры контейнера для карты */
+.project-name {
+    width: 100%;
     display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    background-color: rgb(240, 240, 240);
     justify-content: center;
 }
 
-/* Задаем размеры контейнера для карты */
 #map {
-    width: 100dvw;
-    height: 95dvh;
+    width: 97dvw;
+    height: 90dvh;
     /* max-height: 90dvh; */
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
