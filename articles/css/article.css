@@ -10,9 +10,9 @@
 }
 
 @media (max-width: 767px) {
-.heading-name {
-    font-size: 24px;
-}
+    .heading-name {
+        font-size: 24px;
+    }
 }
 
 .heading-img {
@@ -37,6 +37,7 @@
     flex-direction: row;
     justify-content: end;
 }
+
 .author {
     font-size: 18px;
 }

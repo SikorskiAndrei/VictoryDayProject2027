@@ -1,13 +1,18 @@
 const latitude = 53.9022;
 const longitude = 27.5618;
-let zoom = 11;
+let zoom = 10;
 
-const mediaQuery = window.matchMedia('(min-width: 992px)');
+const mediaQuery1 = window.matchMedia('(min-width: 500px)');
+const mediaQuery2 = window.matchMedia('(min-width: 992px)');
 
 // Проверить прямо сейчас (true / false)
-if (mediaQuery.matches) {
-  zoom = 12;
-} 
+if (mediaQuery1.matches) {
+    zoom = 11;
+}
+
+if (mediaQuery2.matches) {
+    zoom = 12;
+}
 
 
 
