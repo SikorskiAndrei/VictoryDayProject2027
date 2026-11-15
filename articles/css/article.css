@@ -1,5 +1,21 @@
+.project-name {
+    width: 97dvw;
+
+
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    background-color: rgb(240, 240, 240);
+    justify-content: center;
+
+    margin: 5px auto;
+}
+
+
 .heading {
     width: 95%;
+    max-width: 600px;
+
     display: flex;
     flex-direction: row;
     padding: 10px;
@@ -7,6 +23,12 @@
     border-radius: 20px;
     background-color: rgb(240, 240, 240);
     justify-content: center;
+
+    margin: 5px auto;
+}
+
+.heading-name {
+    font-family: "Times New Roman", Times, serif;
 }
 
 @media (max-width: 767px) {
@@ -16,7 +38,7 @@
 }
 
 .heading-img {
-    width: 40dvw;
+    width: 35dvw;
     max-width: 300px;
     border-radius: 20px;
     padding-right: 5px;
@@ -25,19 +47,31 @@
 .article {
     font-size: 23px;
     width: 95%;
+    max-width: 600px;
+
     padding: 10px;
     border: solid grey 2px;
     border-radius: 20px;
     background-color: rgb(240, 240, 240);
+
+    margin: 0 auto;
+
+    font-family: "Times New Roman", Times, serif;
 }
 
 .author-container {
     width: 95%;
+    max-width: 600px;
+
     display: flex;
     flex-direction: row;
     justify-content: end;
+
+    margin: 0 auto;
 }
 
 .author {
     font-size: 18px;
+
+    font-family: "Times New Roman", Times, serif;
 }

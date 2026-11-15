@@ -15,8 +15,6 @@ if (mediaQuery2.matches) {
 }
 
 
-
-// 2. Инициализируем карту. [53.90, 27.56] — это координаты центра Минска. 12 — масштаб (zoom)
 var map = L.map('map', {
     attributionControl: false
 }).setView([latitude, longitude], zoom);
@@ -25,7 +23,7 @@ L.control.attribution({
     prefix: "Проект \"6 \"Г\" помнит!\""
 }).addTo(map);
 
-// 3. Подключаем легальный слой карт OpenStreetMap
+
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="https://openstreetmap.org/copyright/">OpenStreetMap</a> contributors'
