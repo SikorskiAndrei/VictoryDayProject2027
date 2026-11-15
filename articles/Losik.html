@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Лосик Олег Александрович - 6 "Г" помнит!</title>
     <link rel="stylesheet" href="css/article.css" />
+    <link rel="stylesheet" href="css/animation.css" />
 </head>
 
 <body>
@@ -43,6 +44,56 @@
             </div>
         </div>
     </main>
+
+
+    <div class="scene">
+        <!-- Извилистая природная тропинка -->
+        <div class="path-container">
+            <svg class="winding-path-svg" viewBox="0 0 600 1000" preserveAspectRatio="none">
+                <!-- Мягкая тень / травянистая кайма по краям тропинки -->
+                <path d="M 300 1000 C 120 780, 480 620, 270 420 C 140 280, 390 150, 300 0" fill="none" stroke="#5b7d47"
+                    stroke-width="195" stroke-linecap="round" />
+
+                <!-- Основное полотно песочно-земляной тропинки -->
+                <path d="M 300 1000 C 120 780, 480 620, 270 420 C 140 280, 390 150, 300 0" fill="none" stroke="#dfd3bc"
+                    stroke-width="160" stroke-linecap="round" />
+
+                <!-- Внутренняя тёплая протоптанная середина тропы -->
+                <path d="M 300 1000 C 120 780, 480 620, 270 420 C 140 280, 390 150, 300 0" fill="none" stroke="#cbbba0"
+                    stroke-width="95" stroke-linecap="round" />
+
+                <!-- Анимированный маршрут (линия следов/пути), идущий к книге -->
+                <path class="route-trail" d="M 300 1000 C 120 780, 480 620, 270 420 C 140 280, 390 150, 300 0"
+                    fill="none" stroke="#267f38" stroke-width="12" stroke-linecap="round" stroke-dasharray="22 24" />
+            </svg>
+        </div>
+
+        <!-- Книга в конце тропинки -->
+        <div class="book-wrapper">
+            <div class="book">
+                <div class="book-back"></div>
+                <div class="book-page-base">6 "Г" помнит!</div>
+
+                <!-- Двусторонняя обложка -->
+                <div class="book-cover">
+                    <div class="cover-front">
+                        <div class="belarus-ornament"></div>
+                        <div class="flag1"></div>
+                        <div class="flag2"></div>
+                        <div class="cover-frame">
+                            <!-- <div class="cover-star">★</div> -->
+                            <img class="cover-gerb" src="images/Gerb.svg" />
+                            <!-- <div class="cover-date">6 "Г" помнит!</div> -->
+                        </div>
+                    </div>
+                    <div class="cover-inside"></div>
+                </div>
+
+                <!-- Расширяющаяся страница -->
+                <div class="expanding-page"></div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
