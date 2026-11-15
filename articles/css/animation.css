@@ -80,6 +80,13 @@
       animation: bookApproach 2s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
     }
 
+    @media (max-width: 767px) {
+        .book {
+            width: 220px;
+            height: 300px;
+        }
+    }
+
     /* Задняя обложка */
     .book-back {
       position: absolute;
